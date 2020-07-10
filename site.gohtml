@@ -115,20 +115,46 @@
 
 
 
+
+{{/* hugo+myfixes */}}
 {{ define "post" }}
-<article>
-  <header>
-    <h1>{{ .Title }}</h1>
-    <div class="info">
-      {{ template "date" .Date }} &mdash;
-      {{ range $i, $t := .Tags }}{{if $i}},{{end}}
-      <a href="/tags/{{ $t }}/">{{ $t }}</a>{{ end }}
+<section class="hero is-small is-info is-fullwidth">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        {{ .Title }}
+      </h1>
+      <h2 class="subtitle">
+        <time class="pb-8" datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>
+          {{ template "date" .Date }}
+        </time></br>
+        {{/*  hugo tags code
+        {{ if .Param "tags" }}
+        <br>
+        {{ range .Param "tags" }}
+        {{ $name := . }}
+        {{ with $.Site.GetPage (printf "/%s/%s" "tags" ($name | urlize)) }}
+        <a class="tag is-link" href="{{ .Permalink }}">{{ .Title }}</a>
+        {{ end }}
+        {{ end }}
+        {{ end }} */}}
+
+        {{ range $i, $t := .Tags }}{{if $i}},{{end}}
+        <a class="mt-2 tag is-link" href="/tags/{{ $t }}/">{{ $t }}</a>{{ end }}
+
+      </h2>
     </div>
-  </header>
-  <section>
-  {{ .Content }}
-  </section>
-</article>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="content is-medium">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
 {{ end }}
 
 {{define "tag"}}
