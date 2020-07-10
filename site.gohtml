@@ -1,24 +1,4 @@
-{{ define "baseof" }}<!doctype html>
-<html lang="en">
-{{- template "head" . -}}
-<body>
-{{- template "header" . -}}
-<section class="hero is-small is-info is-fullwidth">
-  <div class="hero-body">
-    {{- template "hero-body" . }}
-  </div>
-</section>
-<section class="section">
-  <div class="container">
-    {{- template "main" . }}
-  </div>
-</section>
-{{- template "footer" . -}}
-</body>
-</html>
-{{end}}
-
-{{ define "head" }}
+{{ define "header" }}
 <head>
   <meta charset="utf-8">
   <meta name="author" content="{{ html .Site.Other.Author }}">
