@@ -155,11 +155,32 @@
 </section>
 {{ end }}
 
-{{ end }}
 
+{{/* tag template, for the tags page */}}
 {{define "tag"}}
-# Pages tagged with {{ .Title }}
-{{ range .Site.Pages.WithTag .Title }}
-- [{{ .Title }}](../../{{ .Url }})
-{{ end }}
+<section class="hero is-small is-info is-fullwidth">
+  <div class="hero-body">
+    <div class="container">
+      <article class="media">
+        <div class="media-content">
+          <h1 class="title">
+            Posts tagged with {{.Title}}
+          </h1>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="posts">
+      {{ range .Site.Pages.WithTag .Title }}
+        <div class="post">
+          <div><a href="{{ $.Rel .Url }}" class="title is-size-5">{{ .Title }}</a></div>
+          <div class="subtitle is-6">{{ template "date" .Date }}</div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
 {{ end }}
