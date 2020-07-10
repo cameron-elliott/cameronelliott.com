@@ -91,6 +91,12 @@
 </time>
 {{end}}
 
+{{define "year"}}
+<time datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
+  {{ .Format "2006" }}
+</time>
+{{end}}
+
 {{ define "page" }}{{ template "header" . }}
   {{ .Content }}
 {{ template "footer" . }}{{ end }}
