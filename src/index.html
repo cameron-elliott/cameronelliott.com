@@ -1,9 +1,58 @@
 title: Main Page
 ----
+<section class="hero is-small is-info is-fullwidth">
+  <div class="hero-body">
+    <div class="container">
+      <article class="media">
+        <figure class="image is-64x64 media-left">
+          <img alt="" class="is-rounded"
+            src="/static/img/cameronheadshot-nobg.png" width="32"
+            height="32">
+        </figure>
+        <div class="media-content">
+          <h1 class="title">
+            Cameron Elliott
+          </h1>
+          <h2 class="subtitle">
+            WebRTC developer & consultant. WebRTC Focuses: Reliability/monitoring, large scale live streaming, STUN/TURN
+          </h2>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="posts">
+      {{ range  .Site.Pages.Children "blog/" }}
+      <div class="post">
+        <div><a href="{{ $.Rel .Url }}" class="title is-size-5">{{ .Title }}</a></div>
+        <div class="subtitle is-6">{{ template "date" .Date }}</div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+
+{{/* solokov 
 <ul class="post-list">
 {{ range .Site.Pages.Children "blog/" }}
-  <li>
-    {{ template "date" .Date }} - <a href="{{ $.Rel .Url }}">{{ .Title }}</a>
-  </li>
+<li>
+  {{ template "date" .Date }} - <a href="{{ $.Rel .Url }}">{{ .Title }}</a>
+</li>
 {{ end }}
 </ul>
+*/}}
+
+
+{{/* tomf 
+<div class="posts">
+  {{ range . }}
+<div class="post">
+  <div><a href="{{ .Permalink }}" class="title is-size-5">{{ .Title }}</a></div>
+  <div class="subtitle is-6">{{ .Date.Format "January 02, 2006" }}</div>
+</div>
+{{ end }}
+</div>
+*/}}
