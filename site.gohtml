@@ -101,6 +101,20 @@
   {{ .Content }}
 {{ template "footer" . }}{{ end }}
 
+{{/* cameron unused as now*/}}
+{{ define "posts" }}
+<div class="posts">
+  {{ range . }}
+  <div class="post">
+    <div><a href="{{ $.Rel .Url }}" class="title is-size-5">{{ .Title }}</a></div>
+    <div class="subtitle is-6">{{ template "date" .Date }}</div>
+  </div>
+  {{ end }}
+</div>
+{{ end }}
+
+
+
 {{ define "post" }}
 <article>
   <header>
