@@ -28,3 +28,13 @@ index.html: blog/*.md
 	config
 	inner-template
 	template page
+
+# regarding stuff from: https://designmodo.com/slides/app/
+# lot of files from this tool end up in the site root: /
+# but we dont keep all that stuff directly in src,
+# we keep it under src/slides and move it to the root (site/).
+# we do this for organizational purposes, while the stuff ends
+# up all mixed together in site/, we like it seperate in the src tree
+slides/*: slides/*
+	rename foof/*
+	
