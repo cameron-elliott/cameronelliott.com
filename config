@@ -1,9 +1,9 @@
 TEMPLATES = site.gohtml
 SOURCE = src
 OUTPUT = site
-TITLE = Example Site
-URL = https://example.com/
-AUTHOR = Your Name
+TITLE = Cameron Elliott
+URL = https://cameronelliott.com/
+AUTHOR = Cameron Elliott
 
 blog/*.md:
 	config
