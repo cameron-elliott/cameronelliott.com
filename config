@@ -37,5 +37,7 @@ blog/index.html: blog/*.md config
 # we keep it under src/slides and move it to the root (site/).
 # we do this for organizational purposes, while the stuff ends
 # up all mixed together in site/, we like it seperate in the src tree
-slides/*:
-	rename ../*
+#slides/**/*:
+#	external ./testscript.sh
+#	rename foof/*
+
