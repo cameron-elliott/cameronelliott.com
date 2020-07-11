@@ -1,4 +1,5 @@
 {{ define "header" }}
+{{/* originally head in tomf's bare */}}
 <head>
   <meta charset="utf-8">
   <meta name="author" content="{{ html .Site.Other.Author }}">
@@ -25,6 +26,7 @@
   </title>
   <link rel="stylesheet" type="text/css" href="{{ .Rel "static/style.css" }}">
 </head>
+{{/* originally header in tomf's bare */}}
 <nav class="navbar is-transparent {{ if   .UrlMatches "^/$" }}is-hidden-touch{{end}}" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="/">
@@ -33,7 +35,7 @@
       </figure>
     </a>
     <a class="navbar-item" href="/">
-      {{  .Title }}
+      {{ .Site.Other.Title }}
     </a>
   </div>
   <div class="navbar-menu">
