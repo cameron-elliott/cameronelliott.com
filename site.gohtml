@@ -43,11 +43,13 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start">
-      {{ range .Site.Pages.Children "tags/" }}
-      <a class="navbar-item" href="{{ $.Rel .Url }}">
-        {{ .Title   }}
-      </a>
-      {{ end }}
+      <div class="buttons">
+        {{ range .Site.Pages.Children "tags/" }}
+        <a class="button is-info" href="{{ $.Rel .Url }}">
+          {{ .Title   }}
+        </a>
+        {{ end }}
+      </div>
     </div>
     <div class="navbar-end">
       {{/* {{ range $.Site.Params.social }}
