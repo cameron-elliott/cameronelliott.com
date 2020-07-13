@@ -1,2 +1,2 @@
 [build]
-    command = "go get https://github.com/piranha/gostatic"
+    command = "go install github.com/piranha/gostatic && gostatic config"
