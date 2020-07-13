@@ -1,3 +1,4 @@
 [build]
-    command = "go get github.com/piranha/gostatic && find ~/ -name gostatic "
+    command = "go get github.com/piranha/gostatic && find ~/ -name gostatic && set|grep GO
+ && pwd "
     publish = "site/"
