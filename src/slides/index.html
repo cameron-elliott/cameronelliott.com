@@ -382,42 +382,44 @@
       style="background-image:url(assets/uploads/screenshot-from-2020-06-23-14-00-36.png?p=2SN5u18d)"></div>
   </section>
 
-  <!-- Popup Video -->
-  <!-- Slide #12 -->
+
+
+  <!-- Slide 55 (#55) -->
   <section data-name="contact" class="slide fade-6 kenBurns">
     <div class="content">
       <div class="container">
         <div class="wrap">
 
-          <div class="fix-9-12">
-            <h1 class="margin-bottom-2 ae-1">Want to Talk?</h1>
-            <p class="larger semiBold ae-2"><span class="opacity-8">
-
-              Working with WebRTC?<br/><br/>
-
-              If you have a particular WebRTC issue you are struggling with
-              and want to talk, just send me a quick note.
-              <br/>
-              Sometimes a short conversation can provide a ton of insight
-              <br/>
-              into different ways to resolve a WebRTC or digital video issue.
-              </span></p>
-
-            <div class="left margin-top-3">
-              <form class="slides-form" action="#" autocomplete="off" name="contact" method="POST" data-netlify="true">
-                <input type="email" class="input-12 rounded ae-5 fromLeft" name="email" placeholder="Email address" />
-                <textarea name="Text1" class="input-12 rounded ae-5 fromLeft" name="body" rows="2"  placeholder="Tell me: how can I help you?"></textarea>
-                <!-- <input type="text" class="input-12 rounded ae-5 fromLeft" name="body" placeholder="Tell me: how can I help you?" /> -->
-                <button type="submit" class="button blue rounded ae-7 fromCenter" name="button">Get Started</button>
+          <h1 class="smaller margin-bottom-2 ae-1">Want to Talk?</h1>
+          <p class="large margin-bottom-4 ae-2"><span class="semiBold opacity-8">
+          I always enjoy learning about the challenges facing WebRTC implementors.     <br>
+          Send me a note and we can discuss your project. Often a conversation alone can reveal solutions.<br>
+          If you prefer email, then email me at: Cameron@	&lt;thisdomain.com&gt;
+          </span></p>
+          <div class="form-55 fix-5-12">
+            <div class="pad padding-top-2 shadow left selected ae-3">
+              <form action="ajax-email.php" id="contact-form" method="post" class="slides-form wide" data-ajax-form="true">
+                <ul class="flex noSpaces">
+                  <li class="col-6-12 form-55-input-1">
+                    <div class="label ae-5"><label class="left opacity-8" for="name55">Your name</label></div>
+                    <input class="rounded wide ae-6" id="name55" type="name" name="name" placeholder="Name" required/>
+                  </li>
+                  <li class="col-6-12 form-55-input-2">
+                    <div class="label ae-5"><label class="left opacity-8" for="email55">Email address</label></div>
+                    <input class="rounded wide ae-6" id="email55" type="email" name="email" placeholder="Email" required/>
+                  </li>
+                </ul>
+                <div class="label ae-8"><label class="opacity-8" for="message55">Message</label></div>
+                <textarea class="rounded left wide ae-9" id="message55" type="text" name="message" placeholder="Message" required></textarea>
+                <button type="submit" class="button wide blue rounded ae-10 cropBottom margin-top-2" data-success-text="Done!" data-success-class="message-sent" name="button">Send message</button>
               </form>
-              <!-- <p class="large margin-top-3 ae-3"><span class="opacity-8">Start now and get <b>free bonus</b> on
-                  account</span></p> -->
             </div>
+         
           </div>
-
+          
         </div>
       </div>
-    </div>
+    </div>  
     <div class="background" style="background-image:url(assets/uploads/webrtc-keyboard.jpg)"></div>
   </section>
 
