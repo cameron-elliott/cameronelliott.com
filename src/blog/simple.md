@@ -1,6 +1,7 @@
 title: Simple.
 date: 2012-03-29
 tags: Stun/Turn
+hide: true
 ----
 
 I like things to be simple. So I wrote my own blog software to replace the rather un-simple WordPress. Its not that WordPress its hard to use or install, far from it, Its just got a lot of bloatware in my opinion, so I replaced it with __Simple__.
