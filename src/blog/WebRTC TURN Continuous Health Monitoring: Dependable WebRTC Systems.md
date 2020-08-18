@@ -18,6 +18,7 @@ tags: WebRTC-Reliability, Stun/Turn
 [turn-client]: https://github.com/pion/turn/tree/master/examples
 [Coturn]: https://github.com/coturn/coturn
 [turnutils_uclient]: https://github.com/coturn/coturn/wiki/turnutils_uclient
+[VPS]: https://en.wikipedia.org/wiki/Virtual_private_server
 
 
 
@@ -57,7 +58,7 @@ plain downtime,
 it can affect WebRTC call quality, and without monitoring or insight,
 if users are complaining about call quality, you will have no idea if it
 is temporary packet loss, or a overloaded or malfunctioning TURN server.
-Or your TURN server might just be running on an over-provisioned busy VPS.
+Or your TURN server might just be running on an over-provisioned busy [VPS].
 
 By monitoring some key performance metrics of your TURN servers continuously,
 you can quickly identify or eliminate the TURN servers as the issue,
