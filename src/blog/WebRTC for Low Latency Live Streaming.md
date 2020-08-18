@@ -14,7 +14,7 @@ tags: WebRTC-Live-Streaming
 
 
 [HLS]: https://en.wikipedia.org/wiki/HTTP_Live_Streaming
-[DASH]: https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTPS
+[DASH]: https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP
 
 ## Introduction
 
