@@ -3,7 +3,7 @@ date: 2020-08-16
 tags: WebRTC-Reliability, Stun/Turn
 ----
 
-
+[Grafana]: https://grafana.com/grafana/
 [Prometheus]: https://prometheus.io/
 [Prometheus Exposition Format]: https://prometheus.io/docs/instrumenting/exposition_formats/
 [CloudAlchemy]: https://github.com/cloudalchemy
@@ -191,7 +191,7 @@ At [RTC9.com], if we use TimescaleDB for metric storage, we likely won't use Pro
 a single bash command-line example shows how `curl` can be used to pull and insert metrics
 into the database. 
 
-[Grafana]: https://grafana.com/grafana/
+
 
 ### Graphing with Grafana
 
