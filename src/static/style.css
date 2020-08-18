@@ -1,4 +1,19 @@
 @charset "UTF-8";
+
+
+/* anchorjs styles */
+/*
+ * Link placement and hover behavior.
+ */
+ .anchorjs-link {
+  color: #aaa;
+}
+.anchorjs-link:hover {
+  color: #ff5231;
+}
+
+
+/* I think this stuff below comes from original tom xxx site */
 /*! bulma.io v0.9.0 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
