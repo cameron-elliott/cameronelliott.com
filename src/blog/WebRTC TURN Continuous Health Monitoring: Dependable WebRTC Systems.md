@@ -22,6 +22,28 @@ tags: WebRTC-Reliability, Stun/Turn
 
 
 
+* [High Level Summary for Managers and Developers](#high-level-summary-for-managers-and-developers)
+  * [What is TURN for WebRTC Health Monitoring?](#what-is-turn-for-webrtc-health-monitoring)
+  * [Why NOT TO Monitor WebRTC TURN Server Performance &amp; Health](#why-not-to-monitor-webrtc-turn-server-performance--health)
+  * [Why TO Monitor WebRTC TURN Server Performance &amp; Health](#why-to-monitor-webrtc-turn-server-performance--health)
+  * [Best Health Metrics: Up/Down, Loss, Latency and Jitter](#best-health-metrics-up-down-loss-latency-and-jitter)
+  * [How to Implement TURN Performance Monitoring](#how-to-implement-turn-performance-monitoring)
+  * [Will Monitoring TURN Performance Get Me to Five\-Nines?](#will-monitoring-turn-performance-get-me-to-five-nines)
+* [Developer How\-To for Implementing WebRTC TURN Health Monitoring](#developer-how-to-for-implementing-webrtc-turn-health-monitoring)
+  * [Critical Key Heath Metrics: Jitter, Latency, Loss](#critical-key-heath-metrics-jitter-latency-loss)
+  * [Actually Measuring: Jitter, Latency, Loss](#actually-measuring-jitter-latency-loss)
+  * [Monitoring Systems: Prometheus, Influxdb, TimescaleDB](#monitoring-systems-prometheus-influxdb-timescaledb)
+  * [Getting Measured Metrics Into Your Monitoring System](#getting-measured-metrics-into-your-monitoring-system)
+  * [Graphing with Grafana](#graphing-with-grafana)
+  * [Alerting On Problematic Conditions](#alerting-on-problematic-conditions)
+* [Conclusions](#conclusions)
+  * [Three Ways To Get Robust Monitored STUN/TURN For WebRTC](#three-ways-to-get-robust-monitored-stun-turn-for-webrtc)
+* [Explaining WebRTC STUN/TURN for the Unfamiliar](#explaining-webrtc-stun-turn-for-the-unfamiliar)
+  * [What is STUN/TURN for WebRTC in a Few Sentences](#what-is-stun-turn-for-webrtc-in-a-few-sentences)
+  * [TURN Services Are Needed About 15% to 20% of the Time](#turn-services-are-needed-about-15-to-20-of-the-time)
+
+
+
 
 
 ## High Level Summary for Managers and Developers
