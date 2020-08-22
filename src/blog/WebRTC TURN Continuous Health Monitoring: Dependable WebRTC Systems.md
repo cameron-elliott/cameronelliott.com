@@ -21,9 +21,10 @@ tags: WebRTC-Reliability, Stun/Turn
 [VPS]: https://en.wikipedia.org/wiki/Virtual_private_server
 
 
-
+Table of Contents:  
 
 * [High Level Summary for Managers and Developers](#high-level-summary-for-managers-and-developers)
+  * [What is This Article About?](#what-is-this-article-about)
   * [What is TURN for WebRTC Health Monitoring?](#what-is-turn-for-webrtc-health-monitoring)
   * [Why NOT TO Monitor WebRTC TURN Server Performance &amp; Health](#why-not-to-monitor-webrtc-turn-server-performance--health)
   * [Why TO Monitor WebRTC TURN Server Performance &amp; Health](#why-to-monitor-webrtc-turn-server-performance--health)
@@ -31,6 +32,7 @@ tags: WebRTC-Reliability, Stun/Turn
   * [How to Implement TURN Performance Monitoring](#how-to-implement-turn-performance-monitoring)
   * [Will Monitoring TURN Performance Get Me to Five\-Nines?](#will-monitoring-turn-performance-get-me-to-five-nines)
 * [Developer How\-To for Implementing WebRTC TURN Health Monitoring](#developer-how-to-for-implementing-webrtc-turn-health-monitoring)
+  * [Sample Grafana Screen Shot of Live TURN Server Monitor](#sample-grafana-screen-shot-of-live-turn-server-monitor)
   * [Critical Key Heath Metrics: Jitter, Latency, Loss](#critical-key-heath-metrics-jitter-latency-loss)
   * [Actually Measuring: Jitter, Latency, Loss](#actually-measuring-jitter-latency-loss)
   * [Monitoring Systems: Prometheus, Influxdb, TimescaleDB](#monitoring-systems-prometheus-influxdb-timescaledb)
@@ -49,6 +51,19 @@ tags: WebRTC-Reliability, Stun/Turn
 
 ## High Level Summary for Managers and Developers
 
+### What is This Article About?
+
+This guide is for those using STUN/TURN with WebRTC.
+
+It is to help you decide why you might, or why you might not monitor and track the health and performance of your STUN/TURN servers.
+
+This will also help you decide how to implement monitoring if you decide to do it on your own.
+
+If you need STUN/TURN monitoring, but don't want to build it yourself, [RTC9.COM] offers free and paid services.
+
+If you choose to run your own server, and you choose to build your
+own monitoring infrastructure, you can use [rtc9-turnhealthmonitor] which provides a standard HTTP Prometheus endpoint for most monitoring systems.
+
 ### What is TURN for WebRTC Health Monitoring?
 
 Health monitoring for TURN for WebRTC provides insight into the health and performance of running STUN/TURN servers.
@@ -63,7 +78,6 @@ Or your TURN server might just be running on an over-provisioned busy [VPS].
 By monitoring some key performance metrics of your TURN servers continuously,
 you can quickly identify or eliminate the TURN servers as the issue,
 and proceed to get your entire WebRTC system operating at peak performance.
-
 
 ### Why NOT TO Monitor WebRTC TURN Server Performance & Health
 
@@ -110,6 +124,26 @@ Subscribe to my newsletter to get more info on achieving the highest levels of a
 This part is not for managers, except the most curious!
 This is a high-level guide to implementing TURN health monitoring.
 This guide requires an experienced devops person to implement.
+
+### Sample Grafana Screen Shot of Live TURN Server Monitor
+
+This is an image of the continuous packet TURN session monitoring 
+system we build. The first version. 
+You might decide on different metrics.
+This image & section is just to show what's possible, and 
+does not include setup details for Grafana.
+
+![Grafana Showing Live TURN session Data](/static/img/screenshot-from-2020-06-23-14-00-36.png)
+
+Starting with the , this image shows:
+
+- Lower right: The packet-count rates for TURN session testing a single TURN server with 3x monitoring systems.
+- Upper right: sum of total packets lost. If these are flat, all good, if rising to right, bad.
+- Lower left: This shows packet loss counters. **The interesting this here is just one monitoring VPS shows low-levels of packet loss. We are monitoring with 3x systems. We can ignore this packet loss, and not be thrown by a red-herring**
+- Upper left: This shows windowed max(packet-loss) from all three 'pinger' systems. One packet may have been lost at 9am. Otherwise this looks really healthy.
+
+
+
 
 ### Critical Key Heath Metrics: Jitter, Latency, Loss
 
