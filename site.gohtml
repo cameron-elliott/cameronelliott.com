@@ -26,6 +26,15 @@
   </title>
   <link rel="stylesheet" type="text/css" href="{{ .Rel "static/style.css" }}">
 </head>
+
+
+
+
+{{/* This is the floating subsribe button */}}
+<a href="#" class="button is-floating is-info is-small modal-button" data-target="#myModal" aria-haspopup="true">
+Subscribe
+</a>
+
 {{/* originally header in tomf's bare */}}
 <nav class="navbar is-transparent {{ if   .UrlMatches "^/$" }}is-hidden-touch{{end}}" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
