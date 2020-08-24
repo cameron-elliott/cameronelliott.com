@@ -163,6 +163,30 @@ Subscribe
 </footer>
 <script src="https://kit.fontawesome.com/43b2a6772a.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+
+
+<script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+
+// popup button
+document.querySelectorAll(".modal-button").forEach(function (el) {
+  el.addEventListener("click", function () {
+    var target = document.querySelector(el.getAttribute("data-target"));
+
+    target.classList.add("is-active");
+
+    document.getElementById("email").focus();
+
+    target.querySelector(".xyzzy").addEventListener("click", function () {
+      target.classList.remove("is-active");
+    });
+  });
+});
+
+</script>
+
 <script>
 //anchors.options.placement = 'right';
 //anchors.options.visible = 'always';
