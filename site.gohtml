@@ -35,6 +35,66 @@
 Subscribe
 </a>
 
+{{/* This is the bulma modal */}}
+<div class="modal" id="myModal">
+  <div class="modal-background">
+    </div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title has-text-centered">Subscribe to Cameron's Newsletter</p>
+    </header>
+    <section class="modal-card-body">
+    <p>Hey, Cameron here!
+    I promise not to sell your address or spam you.
+
+    <br/><br/>
+    I want to send you specific WebRTC material so useful, that you say wow!
+    <br/><br/>
+    - Cameron Elliott
+    </p>
+    <br/><br/>
+
+      <form name="contact" id="contact-form" method="POST" data-netlify="true">
+        {{/* <div class="field">
+          <label class="label">Email</label>
+          <div class="control has-icons-left has-icons-right">
+            <input size="40" class="input is-primary" type="email" placeholder="Email input" value="hello@">
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+          </div>
+        </div> */}}
+        <div class="field">
+          <p class="control has-icons-left has-icons-right">
+            <input id="email" class="input" type="email" placeholder="Email">
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span class="icon is-small is-right">
+              <i class="fas fa-check"></i>
+            </span>
+          </p>
+        </div>
+
+
+        <div class="field is-grouped">
+          <div class="field is-grouped">
+            <div class="control">
+              <button type="submit" class="button is-link">Submit</button>
+            </div>
+            <div class="control">
+              <button class="button xyzzy is-link is-light">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </section>
+  </div>
+</div>
+
+
+
 {{/* originally header in tomf's bare */}}
 <nav class="navbar is-transparent {{ if   .UrlMatches "^/$" }}is-hidden-touch{{end}}" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
