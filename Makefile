@@ -1,10 +1,10 @@
 GS ?= gostatic
 
 compile:
-	$(GS) config
+	$(GS) -f config
 
 w:
-	$(GS) -w config
+	$(GS) -f -w config
 
 
 # scss watch
