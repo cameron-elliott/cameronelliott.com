@@ -23,7 +23,7 @@ tags: Stun/Turn
 
 ## Introduction
 
-This is a quick and dirty guide on how to run STUN/TURN using Docker.
+This is a quick and dirty guide on how to run STUN/TURN Coturn server using Docker.
 
 This has some short cuts for using with Digital Ocean, but should be quite useful for running on other cloud providers.
 
