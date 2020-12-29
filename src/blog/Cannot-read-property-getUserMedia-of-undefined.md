@@ -14,20 +14,23 @@ tags: chrome webrtc
 I suspect you are using the Chrome browser, and your trying to access the camera
 or other media device.
 
-Well, if you look at your address bar, are you using HTTP or HTTPS
+Well, if you look at your address bar, are you using HTTP or HTTPS?
 
 If you see that you are using HTTP, you have found the culprit my friend.
 
 You see, Chrome won't let you access the camera, or other mediaDevices when you
-load your page using HTTP, you need to use HTTPS
+load your page using HTTP, you need to use HTTPS.
 
 Whats the quickest way to do that?
 
 Thats a good question.
 
-Apparently there are tricks if you are accessing localhost.
+Apparently there are some ways to do this if you are accessing localhost.
+
+[Stackoverflow:Getting Chrome to accept self-signed localhost certificate](https://stackoverflow.com/a/31900210/86375)
 
 But if you're like me and you use a Mac to access a Linux box, things get a little trickier.
+In that case your not using localhost, so the tricks to allow SSL to localhost won't work.
 
 I'm going to explain how I got a cert for my private IP.
 
