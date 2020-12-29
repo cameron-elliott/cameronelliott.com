@@ -1,4 +1,4 @@
-title: Cannot read property getUserMedia of undefined.md
+title: Cannot read property getUserMedia of undefined
 date: 2020-12-28
 tags: chrome webrtc
 ----
