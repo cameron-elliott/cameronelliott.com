@@ -55,7 +55,7 @@ I recommend Caddy as the webserver to get this going with.
 Here is the link to the article on building Caddy for DuckDns or other
 providers: [https://caddy.community/t/how-to-use-dns-provider-modules-in-caddy-2/8148](link)
 
-I then went to the Caddy custom download [https://caddyserver.com/download](builder here), and then:
+I then went to the Caddy custom download [packager tool](https://caddyserver.com/download), and then:
 1. selected my platform for my build
 2. selected DuckDns as the plugin to be bundled into my binary
 
